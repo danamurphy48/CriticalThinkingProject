@@ -18,7 +18,8 @@ namespace CriticalThinkingWorksheet
 
 
             ForLoopFun forLoopFun = new ForLoopFun();
-            forLoopFun.LoopString();
+            //forLoopFun.LoopString();
+            forLoopFun.LoopUserInput();
 
         }
     }
