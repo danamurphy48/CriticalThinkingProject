@@ -25,21 +25,20 @@ namespace CriticalThinkingWorksheet
         }
         public void LoopUserInput()
         {
-            
             Console.WriteLine($"Please choose how many times you want to loop");
-            int length = Convert.ToInt32(Console.ReadLine());
+            int length = int.Parse(Console.ReadLine());
             for (int i = 0; i < length; i++)
             {
                 Console.WriteLine(i);
             }
         }
-        public void HelloWorldLoop()
+        public void HelloWorldLoop(string userInput)
         {
-            string userInput = "Hello World";
+            string word = "";
 
-            for (int i = 0; i < userInput.Length; i++)
+            for (int i = word.Length; i < userInput.Length; i++)
             {
-                Console.WriteLine(i);
+                Console.Write(userInput[i]);
             }
         }
 
