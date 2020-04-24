@@ -10,11 +10,16 @@ namespace CriticalThinkingWorksheet
     {
         static void Main(string[] args)
         {
-            for (int i = 9; i >= 0; i--)
-            {
-                Console.WriteLine(i);
-            }
-            Console.ReadLine();
+            //for (int i = 9; i >= 0; i--)
+            //{
+            //    Console.Write(i);
+            //}
+            //Console.ReadLine();
+
+
+            ForLoopFun forLoopFun = new ForLoopFun();
+            forLoopFun.LoopString();
+
         }
     }
 }

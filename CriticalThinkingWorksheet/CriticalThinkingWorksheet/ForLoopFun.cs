@@ -13,7 +13,19 @@ namespace CriticalThinkingWorksheet
         //constructor
 
         //member methods
-                   
+        public void LoopString()
+        {
+            string userInput;
+            Console.WriteLine($"Please choose a word to loop");
+            userInput = Console.ReadLine();
+            for (int i = 0; i < userInput.Length; i++)
+            {
+                Console.WriteLine(userInput[i]);
+            }
+
+
+        }
+
 
     }
 }
