@@ -38,8 +38,7 @@ namespace CriticalThinkingWorksheet
 
             for (int i = word.Length; i < userInput.Length; i++)
             {
-
-                if (i%2 ==0)
+                if (i%3 ==0)
                 {
                     Console.WriteLine(userInput[i]);
                 }
