@@ -22,8 +22,6 @@ namespace CriticalThinkingWorksheet
             {
                 Console.WriteLine(userInput[i]);
             }
-
-
         }
         public void LoopUserInput()
         {
@@ -35,7 +33,15 @@ namespace CriticalThinkingWorksheet
                 Console.WriteLine(i);
             }
         }
+        public void HelloWorldLoop()
+        {
+            string userInput = "Hello World";
 
+            for (int i = 0; i < userInput.Length; i++)
+            {
+                Console.WriteLine(i);
+            }
+        }
 
     }
 }
