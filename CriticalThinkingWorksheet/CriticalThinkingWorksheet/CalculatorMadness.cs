@@ -17,11 +17,14 @@ namespace CriticalThinkingWorksheet
 
         public void RunCalculations()
         {
-            AddTwoNumbers(5, 7);
+            
+            Console.WriteLine("Please enter the first number:");
+            int value1 = int.Parse(Console.ReadLine());
+
+            Console.WriteLine("Please enter the second number:");
+            int value2 = int.Parse(Console.ReadLine());
+            int output = AddTwoNumbers(value1, value2);
+            Console.WriteLine("The result is: " + output);
         }
     }
-}            //Console.WriteLine("Please enter the first number:");
-            //int numberOne = int.Parse(Console.ReadLine());
-
-            //Console.WriteLine("Please enter the second number:");
-            //int numberTwo = int.Parse(Console.ReadLine());
+}
