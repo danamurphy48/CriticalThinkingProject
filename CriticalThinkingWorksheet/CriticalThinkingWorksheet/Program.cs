@@ -10,6 +10,17 @@ namespace CriticalThinkingWorksheet
     {
         static void Main(string[] args)
         {
+            WhileLoopFun whileloop = new WhileLoopFun();
+            whileloop.WhileLooper();
+            
+            
+            
+            
+            
+            
+            
+            
+            
             //for (int i = 9; i >= 0; i--)
             //{
             //    Console.Write(i);
@@ -17,10 +28,10 @@ namespace CriticalThinkingWorksheet
             //Console.ReadLine();
 
 
-            ForLoopFun forLoopFun = new ForLoopFun();
+           // ForLoopFun forLoopFun = new ForLoopFun();
            // forLoopFun.LoopString();
             //forLoopFun.LoopUserInput();
-            forLoopFun.HelloWorldLoop("Hello World");
+            //forLoopFun.HelloWorldLoop("Hello World");
 
         }
     }
