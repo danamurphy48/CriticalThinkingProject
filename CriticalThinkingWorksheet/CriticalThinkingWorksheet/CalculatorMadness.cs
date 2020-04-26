@@ -14,6 +14,11 @@ namespace CriticalThinkingWorksheet
             int result = numberOne + numberTwo;
             return result;
         }
+
+        public void RunCalculations()
+        {
+            AddTwoNumbers(5, 7);
+        }
     }
 }            //Console.WriteLine("Please enter the first number:");
             //int numberOne = int.Parse(Console.ReadLine());

@@ -13,6 +13,7 @@ namespace CriticalThinkingWorksheet
 
             CalculatorMadness calculator = new CalculatorMadness();
             calculator.AddTwoNumbers(1, 2);
+            calculator.RunCalculations();
 
 
             //WhileLoopFun whileloop = new WhileLoopFun();
