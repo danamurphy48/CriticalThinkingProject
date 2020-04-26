@@ -15,10 +15,27 @@ namespace CriticalThinkingWorksheet
         //member methods
         public void WhileLooper()
         {
-            Console.WriteLine($"Please choose how many times you want to loop");
-            int counter = int.Parse(Console.ReadLine());
-
-            while (counter < 25)
+            //Console.WriteLine($"Please enter the number 42.");
+            //int counter = int.Parse(Console.ReadLine());
+            //if (counter != 42)
+            //{
+            //    Console.WriteLine("Please enter the number 42.");
+            //    counter = int.Parse(Console.ReadLine());
+            //}
+            //else
+            //{
+            //    while (counter != 42)
+            //        {
+            //            counter++;
+            //        }
+            //}
+            int counter;
+            do
+            {
+                Console.WriteLine("Please enter the number 42.");
+                counter = int.Parse(Console.ReadLine());
+            }
+            while (counter != 42);
             {
                 counter++;
             }
