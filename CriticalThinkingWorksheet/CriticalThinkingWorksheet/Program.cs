@@ -10,12 +10,13 @@ namespace CriticalThinkingWorksheet
     {
         static void Main(string[] args)
         {
-            WhileLoopFun whileloop = new WhileLoopFun();
-            whileloop.WhileLooper();
+
+            CalculatorMadness calculator = new CalculatorMadness();
+            calculator.AddTwoNumbers(1, 2);
 
 
-
-
+            //WhileLoopFun whileloop = new WhileLoopFun();
+            //whileloop.WhileLooper();
 
             //for (int i = 9; i >= 0; i--)
             //{
