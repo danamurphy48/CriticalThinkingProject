@@ -9,13 +9,15 @@ namespace CriticalThinkingWorksheet
     class WhileLoopFun
     {
         //member variables
-
+        
         //constructor
 
         //member methods
         public void WhileLooper()
         {
-            int counter = 5;
+            Console.WriteLine($"Please choose how many times you want to loop");
+            int counter = int.Parse(Console.ReadLine());
+
             while (counter < 25)
             {
                 counter++;

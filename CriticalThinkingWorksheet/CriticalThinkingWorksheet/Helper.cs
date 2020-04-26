@@ -6,11 +6,17 @@ using System.Threading.Tasks;
 
 namespace CriticalThinkingWorksheet
 {
-    class Helper
+    public static class Helper
     {
-        public string GetUserInput()
+        public static string GetUserInput(string output)
         {
+            Console.WriteLine(output);
+            return Console.ReadLine();
+        }
 
+        public static int GetRandomNumber(int min, int max, Random random)
+        {
+            return random.Next(min, max);
         }
     }
 }
