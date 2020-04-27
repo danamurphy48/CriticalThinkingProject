@@ -12,8 +12,11 @@ namespace CriticalThinkingWorksheet
         {
 
             CalculatorMadness calculator = new CalculatorMadness();
-            calculator.AddTwoNumbers(1, 2);
-            calculator.RunCalculations();
+            calculator.Sum();
+            //calculator.AddTwoNumbers(8, 40);
+            //calculator.AddTwoNumbers(200, 50);
+           // Console.WriteLine(calculator.resultTotal);
+           // calculator.RunCalculations();
 
 
             //WhileLoopFun whileloop = new WhileLoopFun();

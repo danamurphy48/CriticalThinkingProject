@@ -9,10 +9,24 @@ namespace CriticalThinkingWorksheet
 {
     class CalculatorMadness
     {
+        //member variables
+        public int resultTotal;
+
+
+
         public int AddTwoNumbers(int numberOne, int numberTwo)
         {
             int result = numberOne + numberTwo;
-            return result;
+            //Console.WriteLine(result);
+            //return result;
+            return numberOne + numberTwo;
+            
+        }
+        public void Sum()
+        {
+            int firstResult = AddTwoNumbers(40, 8);
+            int secondResult = AddTwoNumbers(200, 50);
+            int sum = firstResult + secondResult;
         }
 
         public void RunCalculations()
@@ -25,6 +39,11 @@ namespace CriticalThinkingWorksheet
             int value2 = int.Parse(Console.ReadLine());
             int output = AddTwoNumbers(value1, value2);
             Console.WriteLine("The result is: " + output);
+        }
+
+        public void CalculateTotal(int result)
+        {
+            resultTotal += result;
         }
     }
 }
