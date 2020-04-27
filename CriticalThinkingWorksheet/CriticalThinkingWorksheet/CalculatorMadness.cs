@@ -10,7 +10,7 @@ namespace CriticalThinkingWorksheet
     class CalculatorMadness
     {
         //member variables
-        public int resultTotal;
+        //public int resultTotal;
 
 
 
@@ -41,9 +41,9 @@ namespace CriticalThinkingWorksheet
             Console.WriteLine("The result is: " + output);
         }
 
-        public void CalculateTotal(int result)
-        {
-            resultTotal += result;
-        }
+        //public void CalculateTotal(int result)
+        //{
+        //    resultTotal += result;
+        //}
     }
 }
