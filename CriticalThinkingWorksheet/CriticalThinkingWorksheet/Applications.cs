@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace CriticalThinkingWorksheet
 {
-    class Applications
+    abstract class Applications
     {
         //member variables
         public string ApplicationName;
