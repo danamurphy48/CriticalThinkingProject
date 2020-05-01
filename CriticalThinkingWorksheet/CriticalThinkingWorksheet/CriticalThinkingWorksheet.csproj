@@ -47,6 +47,7 @@
     <Compile Include="CPU.cs" />
     <Compile Include="ForLoopFun.cs" />
     <Compile Include="GPU.cs" />
+    <Compile Include="HardDrive.cs" />
     <Compile Include="Helper.cs" />
     <Compile Include="CalculatorMadness.cs" />
     <Compile Include="Motherboard.cs" />
