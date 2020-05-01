@@ -18,6 +18,33 @@ namespace CriticalThinkingWorksheet
             Name = name;
         }
         //member methods
+        public void ProcessInstall(Applications applications, HardDrive hardDrive, RAM ram)
+        {
+            hardDrive.ApplicationsInHardDrive = new List<Applications>();
+            hardDrive.ApplicationsInHardDrive.Add(applications);
+            hardDrive.TotalStorage = hardDrive.AvailableStorage - applications.RequiredStorage;
+            ram.TotalGigabites -= applications.RequiredRAM; 
+        }
+        public bool CheckRequirements(Applications applications, HardDrive hardDrive, RAM ram)
+        {
+            bool meetsRequirements = false;
+            while (!meetsRequirements)
+            {
+                if ((ram.TotalGigabites < applications.RequiredRAM) || (hardDrive.AvailableStorage < applications.RequiredStorage))
+                {
+                    //meetsRequirements = false;
+                    return false;
+                }
+                else
+                {
+                    ProcessInstall(applications, hardDrive, ram);
+                    //meetsRequirements = true;
+                    return true;
+                }
+            }
+            
+            return true;
+        }
 
 
     }

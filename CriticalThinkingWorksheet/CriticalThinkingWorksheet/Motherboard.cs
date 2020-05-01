@@ -29,13 +29,11 @@ namespace CriticalThinkingWorksheet
         //member methods
         public void InstallApplication(Applications applications)
         {
-            if ((TemporaryMemory.TotalGigabites > Application.RequiredRAM) || (Storage.AvailableStorage > Application.RequiredStorage))
+            if ((TemporaryMemory.TotalGigabites > Application.RequiredRAM) && (Storage.AvailableStorage > Application.RequiredStorage))
             {
                 Storage.ApplicationsInHardDrive = new List<Applications>();
                 Storage.ApplicationsInHardDrive.Add(applications);
             }
-            
         }
-
     }
 }
