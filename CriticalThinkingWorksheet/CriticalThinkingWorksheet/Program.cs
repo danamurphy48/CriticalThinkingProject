@@ -11,12 +11,19 @@ namespace CriticalThinkingWorksheet
         static void Main(string[] args)
         {
 
-            CalculatorMadness calculator = new CalculatorMadness();
-            //calculator.Sum();
-            //calculator.AddTwoNumbers(8, 40);
-            //calculator.AddTwoNumbers(200, 50);
-            //Console.WriteLine(calculator.resultTotal);
-            calculator.RunCalculations();
+
+
+
+
+
+
+
+            //CalculatorMadness calculator = new CalculatorMadness();
+            ////calculator.Sum();
+            ////calculator.AddTwoNumbers(8, 40);
+            ////calculator.AddTwoNumbers(200, 50);
+            ////Console.WriteLine(calculator.resultTotal);
+            //calculator.RunCalculations();
 
 
             //WhileLoopFun whileloop = new WhileLoopFun();
