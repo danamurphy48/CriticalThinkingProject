@@ -11,6 +11,7 @@ namespace CriticalThinkingWorksheet
         //member variables
         public double TotalStorage;
         public double AvailableStorage;
+        public List<Applications> ApplicationsInHardDrive;
 
         //constructor
         public HardDrive(double totalStorage, double availableStorage)

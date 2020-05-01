@@ -25,7 +25,12 @@ namespace CriticalThinkingWorksheet
         }
 
         //member methods
+        public void InstallApplication(Applications applications)
+        {
+            Storage.ApplicationsInHardDrive = new List<Applications>();
+            Storage.ApplicationsInHardDrive.Add(applications);
 
+        }
 
     }
 }
