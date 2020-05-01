@@ -18,26 +18,27 @@ namespace CriticalThinkingWorksheet
             Name = name;
         }
         //member methods
-        public void ProcessInstall(Applications applications, HardDrive hardDrive, RAM ram)
+        public void ProcessInstall(Applications applications, HardDrive hardDrive, RAM ram, Games games, GPU gpu)
         {
             hardDrive.ApplicationsInHardDrive = new List<Applications>();
             hardDrive.ApplicationsInHardDrive.Add(applications);
             hardDrive.TotalStorage = hardDrive.AvailableStorage - applications.RequiredStorage;
-            ram.TotalGigabites -= applications.RequiredRAM; 
+            ram.TotalGigabites -= applications.RequiredRAM;
+            gpu.EffectiveMemory -= games.RequiredEffectiveMemory;
         }
-        public bool CheckRequirements(Applications applications, HardDrive hardDrive, RAM ram)
+        public bool CheckRequirements(Applications applications, HardDrive hardDrive, RAM ram, Games games, GPU gpu)
         {
             bool meetsRequirements = false;
             while (!meetsRequirements)
             {
-                if ((ram.TotalGigabites < applications.RequiredRAM) || (hardDrive.AvailableStorage < applications.RequiredStorage))
+                if ((ram.TotalGigabites < applications.RequiredRAM) || (hardDrive.AvailableStorage < applications.RequiredStorage) || (games.RequiredEffectiveMemory > gpu.EffectiveMemory))
                 {
                     meetsRequirements = false;
                     //return false;
                 }
                 else
                 {
-                    ProcessInstall(applications, hardDrive, ram);
+                    ProcessInstall(applications, hardDrive, ram, games, gpu);
                     meetsRequirements = true;
                     //return true;
                 }
