@@ -32,20 +32,16 @@ namespace CriticalThinkingWorksheet
             {
                 if ((ram.TotalGigabites < applications.RequiredRAM) || (hardDrive.AvailableStorage < applications.RequiredStorage))
                 {
-                    //meetsRequirements = false;
-                    return false;
+                    meetsRequirements = false;
+                    //return false;
                 }
                 else
                 {
                     ProcessInstall(applications, hardDrive, ram);
-                    //meetsRequirements = true;
-                    return true;
+                    meetsRequirements = true;
+                    //return true;
                 }
-            }
-            
-            return true;
+            }   return meetsRequirements;
         }
-
-
     }
 }
