@@ -14,22 +14,27 @@ namespace CriticalThinkingWorksheet
         public RAM TemporaryMemory;
         public HardDrive Storage;
         public GPU Graphics;
+        public Applications Application;
         //constructor
-        public Motherboard(string manufacturer, RAM ram, CPU cpu, HardDrive hardDrive, GPU gpu)
+        public Motherboard(string manufacturer, RAM ram, CPU cpu, HardDrive hardDrive, GPU gpu, Applications applications)
         {
             Manufacturer = manufacturer;
             TemporaryMemory = ram;
             Processor = cpu;
             Storage = hardDrive;
             Graphics = gpu;
+            Application = applications;
         }
 
         //member methods
         public void InstallApplication(Applications applications)
         {
-            Storage.ApplicationsInHardDrive = new List<Applications>();
-            Storage.ApplicationsInHardDrive.Add(applications);
-
+            if ((TemporaryMemory.TotalGigabites > Application.RequiredRAM) || (Storage.AvailableStorage > Application.RequiredStorage))
+            {
+                Storage.ApplicationsInHardDrive = new List<Applications>();
+                Storage.ApplicationsInHardDrive.Add(applications);
+            }
+            
         }
 
     }

@@ -11,7 +11,7 @@ namespace CriticalThinkingWorksheet
         //member variables
         public string ApplicationName;
         public string ApplicationType;
-        public double RequiredRam;
+        public double RequiredRAM;
         public double RequiredStorage;
 
         //constructor
@@ -19,7 +19,7 @@ namespace CriticalThinkingWorksheet
         {
             ApplicationName = "Slack";
             ApplicationType = "Messaging Service";
-            RequiredRam = 4.0;
+            RequiredRAM = 4.0;
             RequiredStorage = 0.512;
         }
         //member methods
