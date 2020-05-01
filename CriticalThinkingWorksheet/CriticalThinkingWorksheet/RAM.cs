@@ -9,8 +9,15 @@ namespace CriticalThinkingWorksheet
     class RAM
     {
         //member variables
+        public double TotalGigabites;
+        public string Brand;
 
         //constructor
+        public RAM(double totalGigabites, string brand)
+        {
+            TotalGigabites = totalGigabites;
+            Brand = brand;
+        }
 
         //member methods
 

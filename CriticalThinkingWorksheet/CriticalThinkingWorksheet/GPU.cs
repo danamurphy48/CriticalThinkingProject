@@ -9,9 +9,15 @@ namespace CriticalThinkingWorksheet
     class GPU
     {
         //member variables
+        public string Manufacturer;
+        public double EffectiveMemory;
 
         //constructor
-
+        public GPU(string manufacturer, double effectiveMemory)
+        {
+            Manufacturer = manufacturer;
+            EffectiveMemory = effectiveMemory;
+        }
         //member methods
 
 
