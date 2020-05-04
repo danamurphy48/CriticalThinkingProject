@@ -19,7 +19,6 @@ namespace CriticalThinkingWorksheet
         public Applications Application;
         public string Manufacturer;
 
-
         //constructor
         public Computer()
         {
@@ -34,33 +33,6 @@ namespace CriticalThinkingWorksheet
         public void BuildComputer()
         {
             Processor.CheckRequirements(games, motherboard);
-            Processor.ProcessInstall(games, motherboard);
         }
     }
 }
-////member variables
-//public CPU cpu;
-////public HardDrive hardDrive;
-////public RAM ram;
-////public Games games;
-////public GPU gpu;
-////constructor
-//public Computer(/*CPU cpu, HardDrive hardDrive, RAM ram, Games games, GPU gpu*/)
-//{
-//    cpu = new CPU("ryzen", "my cpu");
-//    //hardDrive = new HardDrive(1000, 700);
-//    //ram = new RAM(32, "Corsair");
-//    //games = new Games();
-//    //gpu = new GPU("MSI", 16);
-//}
-////member methods
-//public void BuildComputer(Games games, Motherboard motherboard)
-//{
-//    cpu.CheckRequirements(games, motherboard);
-//    cpu.ProcessInstall(games, motherboard);
-//}
-////public void BuildComputer(HardDrive hardDrive, RAM ram, Games games, GPU gpu)
-////{
-////    cpu.CheckRequirements(hardDrive, ram, games, gpu);
-////    cpu.ProcessInstall(hardDrive, ram, games, gpu);
-////}

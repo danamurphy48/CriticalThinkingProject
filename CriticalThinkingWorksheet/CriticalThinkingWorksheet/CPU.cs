@@ -45,29 +45,3 @@ namespace CriticalThinkingWorksheet
         }
     }
 }
-        //public void ProcessInstall(HardDrive hardDrive, RAM ram, Games games, GPU gpu)
-        //{
-        //    hardDrive.ApplicationsInHardDrive = new List<Applications>();
-        //    hardDrive.ApplicationsInHardDrive.Add(games);
-        //    hardDrive.TotalStorage = hardDrive.AvailableStorage - games.RequiredStorage;
-        //    ram.TotalGigabites -= games.RequiredRAM;
-        //    gpu.EffectiveMemory -= games.RequiredEffectiveMemory;
-        //}
-        //public bool CheckRequirements(HardDrive hardDrive, RAM ram, Games games, GPU gpu)
-        //{
-        //    bool meetsRequirements = false;
-        //    while (!meetsRequirements)
-        //    {
-        //        if ((ram.TotalGigabites < games.RequiredRAM) || (hardDrive.AvailableStorage < games.RequiredStorage) || (games.RequiredEffectiveMemory > gpu.EffectiveMemory))
-        //        {
-        //            meetsRequirements = false;
-        //            //return false;
-        //        }
-        //        else
-        //        {
-        //            ProcessInstall(hardDrive, ram, games, gpu);
-        //            meetsRequirements = true;
-        //            //return true;
-        //        }
-        //    }   return meetsRequirements;
-        //}
