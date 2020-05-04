@@ -10,7 +10,19 @@ namespace CriticalThinkingWorksheet
     {
         static void Main(string[] args)
         {
+            Computer computer = new Computer();
+            computer.BuildComputer();
 
+
+            //Manufacturer = manufacturer;
+            //TemporaryMemory = ram;
+            //Processor = cpu;
+            //Storage = hardDrive;
+            //Graphics = gpu;
+            //Application = applications;
+
+
+            //computer.BuildComputer(1000, 200, 8, "Corsair", 2, "horizon zero dawn", "game", 1.0, 0.2, "MSI", 8);
 
 
 

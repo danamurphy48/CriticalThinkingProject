@@ -18,31 +18,56 @@ namespace CriticalThinkingWorksheet
             Name = name;
         }
         //member methods
-        public void ProcessInstall(Applications applications, HardDrive hardDrive, RAM ram, Games games, GPU gpu)
+        public void ProcessInstall(Games games, Motherboard motherboard)
         {
-            hardDrive.ApplicationsInHardDrive = new List<Applications>();
-            hardDrive.ApplicationsInHardDrive.Add(applications);
-            hardDrive.TotalStorage = hardDrive.AvailableStorage - applications.RequiredStorage;
-            ram.TotalGigabites -= applications.RequiredRAM;
-            gpu.EffectiveMemory -= games.RequiredEffectiveMemory;
+            motherboard.Storage.ApplicationsInHardDrive = new List<Applications>();
+            motherboard.Storage.ApplicationsInHardDrive.Add(games);
+            motherboard.Storage.TotalStorage = motherboard.Storage.AvailableStorage - games.RequiredStorage;
+            motherboard.TemporaryMemory.TotalGigabites -= games.RequiredRAM;
+            motherboard.Graphics.EffectiveMemory -= games.RequiredEffectiveMemory;
         }
-        public bool CheckRequirements(Applications applications, HardDrive hardDrive, RAM ram, Games games, GPU gpu)
+        public bool CheckRequirements(Games games, Motherboard motherboard)
         {
             bool meetsRequirements = false;
             while (!meetsRequirements)
             {
-                if ((ram.TotalGigabites < applications.RequiredRAM) || (hardDrive.AvailableStorage < applications.RequiredStorage) || (games.RequiredEffectiveMemory > gpu.EffectiveMemory))
+                if ((motherboard.TemporaryMemory.TotalGigabites < games.RequiredRAM) || (motherboard.Storage.AvailableStorage < games.RequiredStorage) || (games.RequiredEffectiveMemory > motherboard.Graphics.EffectiveMemory))
                 {
                     meetsRequirements = false;
-                    //return false;
                 }
                 else
                 {
-                    ProcessInstall(applications, hardDrive, ram, games, gpu);
+                    ProcessInstall(games, motherboard);
                     meetsRequirements = true;
-                    //return true;
                 }
-            }   return meetsRequirements;
+            }
+            return meetsRequirements;
         }
     }
 }
+        //public void ProcessInstall(HardDrive hardDrive, RAM ram, Games games, GPU gpu)
+        //{
+        //    hardDrive.ApplicationsInHardDrive = new List<Applications>();
+        //    hardDrive.ApplicationsInHardDrive.Add(games);
+        //    hardDrive.TotalStorage = hardDrive.AvailableStorage - games.RequiredStorage;
+        //    ram.TotalGigabites -= games.RequiredRAM;
+        //    gpu.EffectiveMemory -= games.RequiredEffectiveMemory;
+        //}
+        //public bool CheckRequirements(HardDrive hardDrive, RAM ram, Games games, GPU gpu)
+        //{
+        //    bool meetsRequirements = false;
+        //    while (!meetsRequirements)
+        //    {
+        //        if ((ram.TotalGigabites < games.RequiredRAM) || (hardDrive.AvailableStorage < games.RequiredStorage) || (games.RequiredEffectiveMemory > gpu.EffectiveMemory))
+        //        {
+        //            meetsRequirements = false;
+        //            //return false;
+        //        }
+        //        else
+        //        {
+        //            ProcessInstall(hardDrive, ram, games, gpu);
+        //            meetsRequirements = true;
+        //            //return true;
+        //        }
+        //    }   return meetsRequirements;
+        //}

@@ -9,5 +9,10 @@ namespace CriticalThinkingWorksheet
     class Games : Applications
     {
         public double RequiredEffectiveMemory;
+
+        //public Games(double RequiredEffectiveMemory)
+        //{
+        //    RequiredEffectiveMemory = 1.0;
+        //}
     }
 }
